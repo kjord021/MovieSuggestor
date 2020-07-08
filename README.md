@@ -1,2 +1,2 @@
 # Movie Information Portal
-Search for a movie using OMDB. Will return query results using the database.
+Web App Built using HTML, CSS, BootStrap, and Node. Search for a movie using the OMDB API. Will return information about the movie using the API.
