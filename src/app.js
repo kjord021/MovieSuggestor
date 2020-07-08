@@ -57,7 +57,7 @@ app.post("/", function(req, res) {
           const plot = movieData.Plot;
           const rating = movieData.imdbRating;
 
-           res.write("<h4 style='color:white'><center>Year Released: " + yearReleased + "<br><br>Runtime: " + runtime + "<br><br>Genre: " + genre + "<br><br>Director: " + director + "<br><br>Actors: " + actors + "<br><br>Rating: " + rating + "</center><br><br><div style='margin-left:20%;margin-right:20%;'>Plot: " + plot + "</h4><center><button><a href='index.html'>Search For Another Movie.</a></button></center><br>");
+           res.write("<h4 style='color:white'><center>Year Released: " + yearReleased + "<br><br>Runtime: " + runtime + "<br><br>Genre: " + genre + "<br><br>Director: " + director + "<br><br>Actors: " + actors + "<br><br>Rating: " + rating + "</center><br><br><div style='margin-left:20%;margin-right:20%;'>Plot: " + plot + "</h4><center><button><a style='text-decoration:none;' href='index.html'>Search For Another Movie.</a></button></center><br>");
 
         });
 
@@ -73,7 +73,7 @@ app.post("/", function(req, res) {
     else {
       console.log("No results found.");
 
-      res.write(`<body style='background-color:#222; color:white'><center> <br> <h1> Error 404 </h1> <h3>Movie not found</h3> <div style='margin-left:20%;margin-right:20%;'><h5>Hmmm... this movie doesn't seem to be in our database. We apologize for any inconvience.</div><br><button><a href='index.html'>Search For Another Movie.</a></button></center>`);
+      res.write(`<body style='background-color:#222; color:white'><center> <br> <h1> Error 404 </h1> <h3>Movie not found</h3> <div style='margin-left:20%;margin-right:20%;'><h5>Hmmm... this movie doesn't seem to be in our database. We apologize for any inconvience.</div><br><button><a style='text-decoration:none;' href='index.html'>Search For Another Movie.</a></button></center>`);
     }
 
 
