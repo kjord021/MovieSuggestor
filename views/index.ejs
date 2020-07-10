@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Movie Information App</title>
+  <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+</head>
+
+<body>
+
+  <br><br>
+
+  <div class="container">
+    <div class="jumbotron">
+      <h3 class="text-center">Search For Any Movie</h3>
+      <br>
+      <form action="/" method="POST" id="searchForm">
+        <input type="text" class="form-control" id="searchText" name="movieName" placeholder="Search Movies"></input>
+      </form>
+      <div class="container">
+        <br>
+        <center>
+          <p>
+            Welcome to my Movie Information App. Powered by Open Movie Database API, this application will return information about any movie you want (as long as it's within the OMDB).
+            To get started just type the name of the movie you would like to look up into the box above and enjoy!
+          </p>
+        </center>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2">
+      </div>
+      <div class="col-lg-8">
+        <center>
+          <% for (var i = 0; i < movies.length; i++) { %>
+          <h2><%=movies[i].title%></h2>
+          <h3><%=movies[i].plot%></h3>
+          <br><br>
+          <% } %>
+        </center>
+      </div>
+      <div class="col-lg-2">
+      </div>
+    </div>
+    <br>
+  </div>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+
+
+<footer>
+  <center>
+    &copy; Kyle Jordan 2020
+  </center>
+</footer>
+
+</html>
