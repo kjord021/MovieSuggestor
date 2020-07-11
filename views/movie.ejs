@@ -1,3 +1,61 @@
 <%- include("partials/header") -%>
-<h1>Hi Im working</h1>
+
+<div class="container">
+  <div class="jumbotron">
+
+    <div class="container">
+      <center>
+        <div class="row">
+          <div class="col-lg-4">
+          </div>
+          <div class="col-lg-4">
+            <img class="card-img-top" src="<%= movieInformation.image%>" alt="No Image Found" style="width:100%">
+          </div>
+          <div class="col-lg-4">
+          </div>
+        </div>
+          <br><br>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card" >
+              <div class="card-header">
+                <h3 style="text-align: left">Title:</h3>
+                <h4><%=movieInformation.title%></h4>
+              </div>
+              <div class="card-body">
+                <h3 style="text-align: left">Year Released:</h3>
+                <h4><%=movieInformation.yearReleased%></h4>
+              </div>
+              <div class="card-footer">
+                <h3 style="text-align: left">Runtime:</h3>
+                <h4><%=movieInformation.runtime%></h4>
+              </div>
+              <div class="card-body">
+                <h3 style="text-align: left">Genre:</h3>
+                <h4><%=movieInformation.genre%></h4>
+              </div>
+              <div class="card-footer">
+                <h3 style="text-align: left">Director:</h3>
+                <h4><%=movieInformation.Director%></h4>
+              </div>
+              <div class="card-body">
+                <h3 style="text-align: left">Actors:</h3>
+                <h4><%=movieInformation.actors%></h4>
+              </div>
+              <div class="card-footer">
+                <h3 style="text-align: left">Plot:</h3>
+                <h4><%=movieInformation.plot%></h4>
+              </div>
+              <div class="card-body">
+                <h3 style="text-align: left">Average Rating:</h3>
+                <h4><%=movieInformation.rating%></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </center>
+    </div>
+  </div>
+</div>
+
 <%- include("partials/footer") -%>
