@@ -90,7 +90,7 @@ app.get("/movies/:postName", function(req, res){
       fetch(movieURL)
         .then(resp => resp.json())
         .then(movieData => {
-          console.log("Found movie by ID " + movieID + " retrieving results.");
+          console.log("Found movie by ID " + movie.movieID + " retrieving results.");
 
           const yearReleased = movieData.Year;
           const runtime = movieData.Runtime;
@@ -99,9 +99,6 @@ app.get("/movies/:postName", function(req, res){
           const actors = movieData.Actors;
           const plot = movieData.Plot;
           const rating = movieData.imdbRating;
-
-
-
 
       });
     }
