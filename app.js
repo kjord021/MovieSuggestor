@@ -26,6 +26,10 @@ app.get("/", function(req, res) {
 
 app.post("/", function(req, res) {
 
+  while(movies.length > 0){
+    movies.pop();
+  }
+
   const searchText = req.body.movieName;
 
   const url = ("https://www.omdbapi.com/?apikey=" + apikey + "&s=" + searchText);
