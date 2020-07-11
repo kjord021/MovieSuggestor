@@ -54,36 +54,37 @@ app.post("/", function(req, res) {
           const movieImage = data.Search[i].Poster;
           const movieURL = ("http://www.omdbapi.com/?apikey=" + apikey + "&i=" + movieID + "&plot=full")
 
-              const movie = {
-                title: movieTitle,
-                id: movieID,
-                image: movieImage,
-                url: movieURL,
-                // year: yearReleased,
-                // genre: genre,
-                // runtime: runtime,
-                // director: director,
-                // actors: actors,
-                // plot: plot,
-                // rating: rating
-              };
-              movies.push(movie);
+          const movie = {
+            title: movieTitle,
+            id: movieID,
+            image: movieImage,
+            url: movieURL,
+            // year: yearReleased,
+            // genre: genre,
+            // runtime: runtime,
+            // director: director,
+            // actors: actors,
+            // plot: plot,
+            // rating: rating
+          };
+          movies.push(movie);
 
         }
+        res.redirect("/");
       } else {
         res.redirect("/404");
       }
-      res.redirect("/");
+
     });
 });
 
-app.get("/movies/:postName", function(req, res){
+app.get("/movies/:postName", function(req, res) {
 
 
   const requestedTitle = _.lowerCase(req.params.postName);
 
-  movies.forEach(function(movie){
-    if (_.lowerCase(movie.id) === requestedTitle){
+  movies.forEach(function(movie) {
+    if (_.lowerCase(movie.id) === requestedTitle) {
 
       const movieURL = ("http://www.omdbapi.com/?apikey=" + apikey + "&i=" + movie.movieID + "&plot=full")
 
@@ -100,7 +101,7 @@ app.get("/movies/:postName", function(req, res){
           const plot = movieData.Plot;
           const rating = movieData.imdbRating;
 
-      });
+        });
     }
   });
   res.render("movie", {
@@ -108,14 +109,10 @@ app.get("/movies/:postName", function(req, res){
   });
 });
 
-app.get("/404", function(req, res){
-  res.render("404", {
-  });
+app.get("/404", function(req, res) {
+  res.render("404", {});
 });
 
-app.post("/404", function(req,res){
-  redirect("/");
-});
 
 
 app.listen(process.env.PORT || 3000, function() {
